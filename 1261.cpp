@@ -8,6 +8,7 @@
 //  알고스팟
 //
 
+#include <string.h>
 #include <algorithm>
 #include <iostream>
 #include <queue>
