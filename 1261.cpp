@@ -25,6 +25,11 @@ int func() {
     return
 }
 
+bool func2() {
+    
+    return false;
+}
+
 struct point {
     int x, y;
     point(int _x, int _y) {
