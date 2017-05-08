@@ -5,13 +5,15 @@
 //  Created by 최동진 on 2017. 4. 1..
 //  Copyright © 2017년 최동진. All rights reserved.
 //
+//  알고스팟
+//
 
 #include <iostream>
 #include <queue>
 #include <string.h>
 using namespace std;
 
-int map[101][101];
+int adj[101][101];
 bool visit[101][101];
 int check[101][101];
 
@@ -28,7 +30,7 @@ struct point {
 
 struct cmp {
     bool operator()(point u, point y) {
-        return map[u.y][u.x] < map[y.y][y.x];
+        return adj[u.y][u.x] < adj[y.y][y.x];
     }
 };
 
@@ -52,7 +54,7 @@ int main() {
     for(int i = 1; i <= m; i++) {
         for(int j = 1; j <= n; j++) {
             scanf("%1d", &dot);
-            map[i][j] = dot;
+            adj[i][j] = dot;
         }
     }
     
@@ -73,7 +75,7 @@ int main() {
             
             if(tempX <= n && tempY <= m && tempX > 0 && tempY > 0) {
     
-                if(map[tempY][tempX] == 0) {
+                if(adj[tempY][tempX] == 0) {
                     if(!visit[tempY][tempX]) {
                         visit[tempY][tempX] = true;
                         check[tempY][tempX] = check[frontY][frontX];
