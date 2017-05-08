@@ -69,11 +69,11 @@ int main() {
         }
         
         int tempX, tempY;
-        for(int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
             tempX = frontX + dx[i];
             tempY = frontY + dy[i];
             
-            if(tempX <= n && tempY <= m && tempX > 0 && tempY > 0) {
+            if (tempX <= n && tempY <= m && tempX > 0 && tempY > 0) {
     
                 if(adj[tempY][tempX] == 0) {
                     if(!visit[tempY][tempX]) {
