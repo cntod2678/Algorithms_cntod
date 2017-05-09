@@ -41,8 +41,8 @@ int main() {
 */
 
 
-/*
- 에라토네스의 체
+
+// 에라토네스의 체
  
 #include <iostream>
 using namespace std;
@@ -75,5 +75,3 @@ int main(void) {
     
     func(M);
 }
-
- */
